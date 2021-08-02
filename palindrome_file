@@ -1,0 +1,17 @@
+#!/usr/bin/node
+
+let fs = require("fs");
+let Phrase = require("jkrugell-palindrome");
+let text = fs.readFileSync("phrases.txt", "utf-8");
+let palindromesArray = [];
+
+text.split("\n").forEach(function (line) {
+  let phrase = new Phrase(line);
+  if (phrase.palindrome()) {
+    // console.log("palindrome detected:", line);
+      palindromesArray.push(line);
+      
+  }
+});
+
+fs.writeFileSync("palindromes.txt", palindromesArray.join("\n"))

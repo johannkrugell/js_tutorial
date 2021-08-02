@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "jkrugell-palindrome": "^0.1.0"
+    "fs": "^0.0.1-security",
+    "jkrugell-palindrome": "^0.1.0",
+    "jsdom": "^16.6.0",
+    "request": "^2.88.2",
+    "urllib": "^2.37.3"
   }
 }
